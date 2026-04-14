@@ -1,0 +1,507 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid pink; */
+}
+body{
+  background-color: rgb(223 227 217);
+}
+/* ヘッダー */
+.header{
+  width: 100%;
+  height: 100px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 100;
+  border-bottom: 2px solid rgb(177, 223, 104);
+}
+.top-btn{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(177, 223, 104);
+  bottom: 0;
+  right: 0;
+}
+
+.header_container{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+.logo{
+  height: 70px;
+}
+.header_menu{
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  font-size: 1.5rem;
+}
+.header_icon{
+  width: 35px;
+  margin-right: 10px;
+}
+.nav_list_item{
+  display: flex;
+  text-decoration: none;
+  color: darkcyan;
+}
+.nav_list_item:hover{
+  color: rgb(177, 223, 104);
+}
+@media screen and (max-width: 960px) {
+  .header{
+    width: 100%;
+    height: 100px;
+    /* position: fixed; */
+    background-color: #fff;
+    z-index: 100;
+    border-bottom: 2px solid rgb(177, 223, 104);
+  }
+  .header_container{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .logo{
+    height: 50px;
+  }
+  .header_menu{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    font-size: 1.2rem;
+  }
+  .header_icon{
+    width: 30px;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 480px){
+  .header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    background-color: #fff;
+    z-index: 100;
+    border-bottom: 2px solid rgb(177, 223, 104);
+  }
+  .header_container{
+    width: 100%;
+    height: 100px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 20px;
+  }
+  .logo{
+    height: 40px;
+    margin: 10px 20px;
+  }
+  .header_menu{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    font-size: 1rem;
+    justify-content: center;
+  }
+  .header_icon{
+    width: 20px;
+    margin-right: 10px;
+  }
+
+}
+
+/* セクションタイトル */
+.section_title{
+  padding: 30px;
+  padding-top: 130px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: darkcyan;
+}
+
+
+/* メインコンテンツ */
+.main-content{
+  width: 60%;
+  background-color: #fff;
+  margin: 0 auto;
+}
+@media screen and (max-width: 960px) {
+  .main-content{
+    width: 80%;
+    background-color: #fff;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 480px){
+    .main-content{
+    width: 100%;
+    /* background-color: #fff; */
+    margin: 0 auto;
+  }
+}
+
+/* メインビジュアル スライダー */
+.main_visual { 
+  width: 60%; 
+  margin: 0 auto;
+  object-fit: cover; 
+  overflow: hidden;
+ }
+ @media screen and (max-width: 960px) {
+.main_visual { 
+  width: 80%; 
+  margin: 0 auto;
+  object-fit: cover; 
+  overflow: hidden;
+ }
+}
+@media (max-width: 480px){
+.main_visual { 
+  width: 100%; 
+  margin: 0 auto;
+  object-fit: cover; 
+  overflow: hidden;
+ }
+}
+
+.slider-inner {
+  display: flex;
+  width: 400%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  animation: slide-anim 19.50s infinite;
+}
+.slider-inner li { width: 25.0000%; }
+.slider-inner li img { width: 100%; height: auto; display: block; }
+
+.css-slider:hover .slider-inner { animation-play-state: paused; }
+@keyframes slide-anim {
+    0.00%, 25.64% { transform: translateX(-0.0000%); }
+    33.33%, 58.97% { transform: translateX(-25.0000%); }
+    66.67%, 92.31% { transform: translateX(-50.0000%); }
+    100.00%, 100% { transform: translateX(-75.0000%); }
+}
+
+
+
+
+/* アバウト */
+.picture{
+  width: 50%;
+  height: 200px;
+  object-fit: cover;
+}
+.wrap{
+  display: flex;
+}
+.about_picture{
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  box-shadow: 5px 4px 5px darkcyan;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+.text_wrap{
+  margin: 0 auto;
+  width: 50%;
+  padding: 0 10px;
+  color: #636363;
+}
+.text_question{
+  margin-bottom: 30px;
+}
+.text_answer{
+  font-size: 1.5rem;
+  margin: 0 auto;
+  margin-top:  40px;
+  margin-bottom: 40px;
+  color: darkcyan;
+}
+.picture_wrap{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 960px) {
+  .wrap{
+    display: block;
+  }
+
+  .text_wrap{
+    margin: 0 auto;
+    width: 70%;
+    margin-top: 20px;
+  }
+  .text_question br {
+    display: none;
+  }
+  .about_picture{
+    width: 290px;
+    height: 320px;
+    position: relative;
+    margin-left: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 480px){
+  .wrap{
+    display: block;
+  }
+  .text_wrap{
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 20px;
+  }
+}
+
+
+/* ピックアップ */
+.Pickup_contents{
+  display: flex;
+  justify-content: center;
+}
+.btn_pic{
+  width: 100px;
+  height: 100px;
+  object-fit: fill;
+  border-radius: 50%;
+  display: block;
+  margin: 20px;
+  margin-left: 100px;
+  box-shadow: 2px 2px 5px rgb(177, 223, 104);
+  transition: transform 0.3s ease;
+  filter: grayscale(100%);
+}
+.btn_pic:hover{
+  transform: scale(1.02);
+  filter: grayscale(0%);
+}
+@media screen and (max-width: 960px) {
+  .Pickup_contents{
+    display: block;
+
+  }
+  .button_picture{
+    display: flex;
+    justify-content: center;
+  }
+  .btn_pic{
+    width: 60px;
+    height: 60px;
+    margin: 10px 20px;
+}
+  
+}
+/* フレーム内 */
+.frame{
+  width: 60%;
+  height: 500px;
+  background-color: rgb(177, 223, 104);
+  border-radius: 30px;
+  position: relative;
+  border: 2px solid darkcyan;
+}
+.Pickup_picture{
+  width: 70%;
+  height: 300px;
+  object-fit: cover;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 50px;
+  border: 6px solid #fff;
+  border-radius: 3px;
+}
+dl{
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 350px;
+}
+dt{
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 960px) {
+.frame{
+  width: 90%;
+  height: 600px;
+  background-color: rgb(177, 223, 104);
+  border-radius: 30px;
+  position: relative;
+  border: 2px solid darkcyan;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+}
+dl{
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 400px;
+}
+}
+
+/* フレームデコ */
+.deco1{
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.deco2{
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}.deco3{
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+.deco4{
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+
+
+/* ギャラリー */
+.Gallery_pict{
+  column-count: 4;
+  column-gap: 1rem;
+  padding: 1rem;
+}
+
+ .Gallpic{
+  width: 100%;
+  margin-bottom: 1rem;
+  display: block;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+.Gallpic:hover{
+  transform: scale(1.02);
+}
+@media (max-width: 960px){
+  .Gallery_pict{
+  column-count: 2;
+}
+}
+@media (max-width: 480px){
+  .Gallery_pict{
+  column-count: 1;
+}
+}
+
+/* 自己紹介 */
+.Creator_title{
+  padding: 50px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: darkcyan;
+  border-top: 2px solid rgb(177, 223, 104);
+  border-bottom: 2px solid rgb(177, 223, 104);
+}
+.my_icon{
+  width: 200px;
+  height: 200px;
+}
+.introduction{
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.self_introduction{
+  color: darkcyan;
+  padding: 20px;
+  /* border: 2px solid rgb(177, 223, 104); */
+  border-radius: 10px;
+}
+.Thin_text{
+  color: rgb(223 227 217);
+  display: flex;
+}
+h3 span{
+  color: rgb(223 227 217);
+  margin-left: 10px;
+}
+h3::after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: rgb(223 227 217);
+  margin: 10px 0 ;
+}
+.self_introduction_text{
+  color: #636363;
+  margin-top: 15px;
+}
+@media screen and (max-width: 960px){
+  .introduction{
+    display: block;
+  }
+  .my_icon{
+    display: flex;
+    margin: 0 auto;
+  }
+
+}
+
+/* フッター */
+.footer{
+  width: 100%;
+  height: 50px;
+  background-color: darkcyan;
+}
+.copyright{
+  text-align: center;
+  color: #fff;
+  padding-top: 15px;
+}
